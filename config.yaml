@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: photostudio-config
+  namespace: photostudio-ns
+data:
+  PORT: "3000"
