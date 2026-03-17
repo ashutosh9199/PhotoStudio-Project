@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo
-  namespace: ashutosh-ns
+  namespace: photostudio-ns
 spec:
   replicas: 1
   selector:
@@ -24,7 +24,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: mongo
-  namespace: ashutosh-ns
+  namespace: photostudio-ns
 spec:
   type: ClusterIP
   selector:
@@ -38,7 +38,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: photostudio-app
-  namespace: ashutosh-ns
+  namespace: photostudio-ns
 spec:
   replicas: 2
   selector:
@@ -70,7 +70,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: photostudio-service
-  namespace: ashutosh-ns
+  namespace: photostudio-ns
 spec:
   type: NodePort
   selector:
